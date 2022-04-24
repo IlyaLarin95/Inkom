@@ -5,10 +5,7 @@
 /src
 
 # testing
-/coverage
-
-# production
-/build
+/test
 
 # misc
 .DS_Store
