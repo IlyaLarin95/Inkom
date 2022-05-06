@@ -1,0 +1,78 @@
+.advanteges {
+    @include padding-top(78,50);
+    @include padding-bottom(118,50);
+    background: url('../img/circle-r.svg') right -100px top -300px no-repeat, url('../img/circle-l.svg') left 0px bottom -450px no-repeat;
+    span {
+        color: $brown;
+    }
+    &__title {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    &__wrapper {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        @include gap(74,40);
+    }
+    &__item {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        @include gap(40,30);
+    }
+    &__info {
+        max-width: 45%;
+    }
+    &__num {
+        @include font-size(96, 80);
+        line-height: 1.2;
+        text-transform: uppercase;
+        color: $brown;
+        opacity: 0.3;
+    }
+    &__head {
+        margin-top: 24px;
+        @include font-size(30, 24);
+        line-height: 1.2;
+        text-transform: uppercase;
+        color: $black;
+    }
+    &__list {
+        margin-top: 42px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        max-width: 405px;
+        padding-left: 47px;
+        &-item {
+            font-weight: 400;
+            @include font-size(18, 14);
+            line-height: 1.2;
+            color: $black;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -40px;
+                width: 15.56px;
+                height: 15.56px;
+                border: 2px solid $brown;
+                filter: drop-shadow(0px 4px 4px rgba(207, 165, 91, 0.5));
+                transform: rotate(-45deg) translateY(-50%);
+            }
+        }
+    }
+    &__btn {
+        margin-top: 43px;
+    }
+    &__img {
+        display: block;
+        width: 50%;
+        height: 390px;
+        box-shadow: 0px 5px 50px rgba(60, 60, 60, 0.4);
+        border-radius: 10px;
+        object-fit: cover;
+    }
+}

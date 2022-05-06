@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/MuseoSansCyrl-900.eot');
+    src: url('../fonts/MuseoSansCyrl-900.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MuseoSansCyrl-900.woff') format('woff'),
+    url('../fonts/MuseoSansCyrl-900.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/MuseoSansCyrl-700.eot');
+    src: url('../fonts/MuseoSansCyrl-700.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MuseoSansCyrl-700.woff') format('woff'),
+    url('../fonts/MuseoSansCyrl-700.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/MuseoSansCyrl-500.eot');
+    src: url('../fonts/MuseoSansCyrl-500.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MuseoSansCyrl-500.woff') format('woff'),
+    url('../fonts/MuseoSansCyrl-500.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../fonts/MuseoSansCyrl-300.eot');
+    src: url('../fonts/MuseoSansCyrl-300.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MuseoSansCyrl-300.woff') format('woff'),
+    url('../fonts/MuseoSansCyrl-300.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+
+@import 'base/variables';
+@import 'base/mixins';
+@import 'blocks/global';
+@import 'blocks/header';
+@import 'blocks/hamburger';
+@import 'blocks/promo';
+@import 'blocks/advanteges';
+@import 'blocks/info';
+@import 'blocks/catalog';
+@import 'blocks/tabs';
+@import 'blocks/consultation';
+@import 'blocks/footer';
+@import 'blocks/modal';
+
+
+* {
+    font-family: 'Museo Sans', sans-serif;
+    font-weight: 900;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    @include container($containerWidth);
+}
+
+
+@import 'base/media';

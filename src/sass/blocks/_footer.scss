@@ -1,0 +1,101 @@
+.footer {
+    @include padding-top(50,40);
+    @include padding-bottom(50,40);
+    & * {
+        color: $black;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__address {
+        padding-left: 50px;
+        max-width: 253px;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 500;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0px;
+            background: url('../icons/map.svg') no-repeat center;
+            width: 39px;
+            height: 40px;
+        }
+    }
+    &__git {
+        color: $black;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 500;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        position: relative;
+        padding: 8px;
+        &:hover {
+            &:after {
+                transform: translateX(-50%) scale(1);
+                transition: .4s ease all;
+            }
+            &::before {
+                transform: translateX(-50%) translateY(0) scale(1);
+                transition: .4s ease all;
+                opacity: 1;
+            }
+            svg {
+                transform: rotate(360deg);
+                transition: .65s ease all;
+                path {
+                    fill: $brownDark;
+                    transition: .65s ease all;
+                }
+            }
+        }
+        &-icon {
+            transition: .65s ease all;
+            path {
+                transition: .65s ease all;
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%) scale(.885);
+            width: 100%;
+            height: 2px;
+            background-color: $black;
+            transition: .4s ease all;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%) translateY(39px) scale(.885);
+            width: 100%;
+            height: 2px;
+            background-color: $black;
+            transition: .4s ease all;
+            opacity: 0;
+        }
+    }
+    &__phone {
+        color: $black;
+        font-weight: 700;
+        @include font-size(22,18);
+        line-height: 1.2;
+        text-transform: uppercase;
+        transition: .3s ease all;
+        &:hover {
+            color: $brown;
+            transition: .3s ease all;
+        }
+    }
+}

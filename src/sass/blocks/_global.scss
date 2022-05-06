@@ -1,0 +1,40 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.title {
+    @include font-size(36, 28);
+    line-height: 1.2;
+    text-align: center;
+    color: #424242;
+}
+
+.btn {
+    @include padding-top(32,20);
+    @include padding-bottom(32,20);
+    @include padding-right(66,32);
+    @include padding-left(66,32);
+    background: $brown;
+    box-shadow: 0px 20px 40px rgba(207, 165, 91, 0.4);
+    border-radius: 5px;
+    @include font-size(18,14);
+    line-height: 1.2;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    width: fit-content;
+    &:hover {
+        background-color: #e3b76a;
+        transition: .3s ease all;
+        box-shadow: 0px 20px 40px rgba(225, 180, 102, 0.7);
+    }
+}
